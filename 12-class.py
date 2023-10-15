@@ -1,4 +1,5 @@
-class Customer:
+# class People():
+class People:
     def __init__(self, username, password, type="user"):
         self.username = username
         self.password = password
@@ -16,12 +17,24 @@ class Customer:
         self.username = username
         print("Add to Chart", self.username)
 
+class Customer(People):
+    pass # Empty class is not lonely, just added "pass"
 
-customer1 = Customer("Dara", "123")
+class Staff(People):
+    def __init__(self, username, password, type="user"):
+        super().__init__(username, password, type)
+
+    def generateReport(self):
+        print("I can generate report!")
+
+staff1 = Staff()
+staff1.generateReport()
+
+customer1 = People("Dara", "123")
 customer1.login()
 customer1.register("Nita", "123")
 customer1.login()
 customer1.add_to_chart("Bora")
 customer1.login()
-customer1 = Customer(password="123", username="Dara2", type="Admin")
+customer1 = People(password="123", username="Dara2", type="Admin")
 customer1.login()
