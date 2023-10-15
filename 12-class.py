@@ -1,4 +1,4 @@
-class Customer():
+class Customer:
     def __init__(self, username, password, type="user"):
         self.username = username
         self.password = password
