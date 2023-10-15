@@ -16,5 +16,6 @@ else:
 for item in ["apple", "banana", "jerry"]:
     print(item)
 
-for item in range(10):
-    print(item)
+for _ in range(10):
+    a, b = 10, 20
+    print("Don't need item", a, b)
