@@ -1,5 +1,8 @@
-import lib.my_greeting
-mylib = lib.my_greeting
+# from modules import my_greeting
+# from modules.my_greeting import greeting
+
+import modules.my_greeting
+mylib = modules.my_greeting
 # from lib.my_greeting import greeting
 
 # Here we call parameters
